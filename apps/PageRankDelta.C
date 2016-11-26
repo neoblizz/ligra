@@ -127,5 +127,11 @@ void Compute(graph<vertex>& GA, commandLine P) {
     Frontier.del();
     Frontier = active;
   }
+  
+  printf("Edges Visited: %d\n", EDGES_VISITED);
+  printf("Iterations: %d\n", ITERATIONS);
+  EDGES_VISITED=0;
+  ITERATIONS=0;
+
   Frontier.del(); free(p); free(Delta); free(nghSum); All.del();
 }

@@ -98,5 +98,11 @@ void Compute(graph<vertex>& GA, commandLine P) {
     Frontier.del(); 
     Frontier = output;
   }
+
+  printf("Edges Visited: %d\n", EDGES_VISITED);
+  printf("Iterations: %d\n", ITERATIONS);
+  EDGES_VISITED=0;
+  ITERATIONS=0;
+  
   Frontier.del(); free(p_curr); free(p_next); 
 }

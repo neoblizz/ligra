@@ -43,6 +43,10 @@ using namespace std;
 
 //*****START FRAMEWORK*****
 
+//Record edges visited and iterations.
+unsigned int EDGES_VISITED;
+unsigned int ITERATIONS;
+
 //options to edgeMap for different versions of dense edgeMap (default is DENSE)
 enum options { DENSE, DENSE_FORWARD };
 
@@ -117,6 +121,9 @@ vertexSubset edgeMap(graph<vertex> GA, vertexSubset &V, F f, intT threshold = -1
     frontierVertices[i] = v;
     }}
   uintT outDegrees = sequence::plusReduce(degrees, m);
+  EDGES_VISITED += outDegrees;
+  ITERATIONS++;
+
   if (outDegrees == 0) return vertexSubset(numVertices);
   if (m + outDegrees > threshold) { 
     V.toDense();

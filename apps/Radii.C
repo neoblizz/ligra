@@ -99,6 +99,7 @@ void Compute(graph<vertex>& GA, commandLine P) {
     Frontier = output;
   }
 
+  printf("sub_algorithm: radii\n");
   printf("Edges Visited: %d\n", EDGES_VISITED);
   //printf("Iterations: %d\n", ITERATIONS);
   EDGES_VISITED=0;

@@ -53,6 +53,7 @@ void Compute(graph<vertex>& GA, commandLine P) {
   } 
   
   // Output Results
+  printf("sub_algorithm: bfs\n");
   printf("Edges Visited: %d\n", EDGES_VISITED);
   //printf("Iterations: %d\n", ITERATIONS);
   EDGES_VISITED=0;

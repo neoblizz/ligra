@@ -137,9 +137,10 @@ void Compute(graph<vertex>& GA, commandLine P) {
     //vertex map to mark visited and update Dependencies scores
     vertexMap(Frontier,BC_Back_Vertex_F(Visited,Dependencies,inverseNumPaths));
   }
- 
+  
+  printf("sub_algorithm: bc\n");
   printf("Edges Visited: %d\n", EDGES_VISITED);
-  //printf("Iterations: %d\n", ITERATIONS);
+  printf("Iterations: %d\n", ITERATIONS);
   EDGES_VISITED=0;
   //ITERATIONS=0;
 

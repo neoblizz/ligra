@@ -68,7 +68,7 @@ struct PR_Vertex_Reset {
 
 template <class vertex>
 void Compute(graph<vertex>& GA, commandLine P) {
-  long maxIters = P.getOptionLongValue("-maxiters",100);
+  long maxIters = P.getOptionLongValue("-maxiters",1);
   const intE n = GA.n;
   const double damping = 0.85, epsilon = 0.0000001;
   
@@ -98,7 +98,7 @@ void Compute(graph<vertex>& GA, commandLine P) {
     Frontier.del(); 
     Frontier = output;
   }
-
+   printf("sub_algorithm: pagerank\n");
   printf("Edges Visited: %d\n", EDGES_VISITED);
   printf("Iterations: %d\n", ITERATIONS);
   EDGES_VISITED=0;

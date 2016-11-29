@@ -66,4 +66,6 @@ void Compute(graph<vertex>& GA, commandLine P) {
     Frontier = output;
   }
   Frontier.del(); free(IDs); free(prevIDs);
+
+   printf("sub_algorithm: cc\n");
 }

@@ -140,7 +140,7 @@ void Compute(graph<vertex>& GA, commandLine P) {
   
   printf("sub_algorithm: bc\n");
   printf("Edges Visited: %d\n", EDGES_VISITED);
-  printf("Iterations: %d\n", ITERATIONS);
+  //printf("Iterations: %d\n", ITERATIONS);
   EDGES_VISITED=0;
   //ITERATIONS=0;
 
